@@ -7,7 +7,6 @@ var app = app || {};
   const view = {};
 
   view.initReport = function() {
-    console.log(app.ENVIRONMENT.apiUrl);
     $.get(`${app.ENVIRONMENT.apiUrl}/data/sea-gov`)
       .then(console.log)
       .catch(console.error)
