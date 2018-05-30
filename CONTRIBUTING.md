@@ -1,4 +1,4 @@
-# Code of Conduct for Culture Fit
+# Code of Conduct for SAFR
 
 ## Communication plan
 ### Group Communication
