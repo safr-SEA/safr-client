@@ -43,7 +43,7 @@ var app = app || {};
       lat: marker.position.lat(),
       lng: marker.position.lng()
     }   
-    console.log(dataLatLng);
+    console.log('click data',dataLatLng);
     
     $.get(`${app.ENVIRONMENT.apiUrl}/data/sea-gov/latlng`, {dataLatLng})
       .then( result => {
@@ -73,29 +73,27 @@ var app = app || {};
               console.log("Returned place contains no geometry");
               return;
             }
-            var icon = {
-              url: place.icon,
-              size: new google.maps.Size(71, 71),
-              origin: new google.maps.Point(0, 0),
-              anchor: new google.maps.Point(17, 34),
-              scaledSize: new google.maps.Size(25, 25)
-            };
 
           let Marker = 
             new google.maps.Marker({
             map: map,
-            icon: icon,
             title: place.name,
             position: place.geometry.location
           });
 
-          let searchLatLng = {
+          let dataLatLng = {
             lat: Marker.position.lat(),
             lng: Marker.position.lng()
           };
-          console.log(searchLatLng);
+          console.log('search data',dataLatLng);
 
           markers.push(Marker);
+
+          $.get(`${app.ENVIRONMENT.apiUrl}/data/sea-gov/latlng`, {dataLatLng})
+          .then( result => {
+            $('#crime-rows').text(result.length);
+          })
+          .catch(console.error) 
 
           if (place.geometry.viewport) {
             // Only geocodes have viewport.
@@ -106,6 +104,9 @@ var app = app || {};
           });
         
           map.fitBounds(bounds);
+
+          
+    
         });
     
 
