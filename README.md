@@ -3,13 +3,13 @@
 ## Description
 Our ultimate goal is to use crime and police response time data (data.seattle.gov API)  to allow people to discover places that are underserved by municipalities in terms of police response times. This allows the public to start a conversation about potential improvements and empowers residents and visitors to make informed decisions about their safety.
 
-To be able to stay within the time constraints of this final project, we are starting with loading the 911 calls that had officer responses and map those locations using Google Maps. This does not yet incluce the response time.
+To be able to stay within the time constraints of this final project, we are starting with loading the 911 calls that had officer responses and map those locations using Google Maps API. This does not yet include the response time.
 
 ## Getting Started
 * Used the .eslintrc.json and the .gitignore from the class repo
 * Used the normalize.css rules that we've used in class
 * We each got personal keys for the data.seattle.gov's API
-* We are using Google Maps free API which allows up to 1,000 calls daily.
+* We are using Google Maps free API which allows up to 1,000 calls daily without an API key or 2,500 with the key.
 
 ## Prerequisites
 There are no prerequisites for using this program.
@@ -23,17 +23,17 @@ This was built using JavaScript, jQuery, PostgresQL, HTML, and CSS.  We also use
 * [Git Hub](https://github.com/karenbtlai)
 
 ### Justin Whitaker
-* @imaginarytrend
+* Twitter: @imaginarytrend
 * [Linked In](https://www.linkedin.com/in/justin-whitaker/)
 * [Git Hup](https://github.com/Trendswithbenefits)
 
 ### Jermaine Walker
-* @stateofjermaine
+* Twitter: @stateofjermaine
 * [Linked In](https://www.linkedin.com/in/jermainemwalker)
 * [Git Hub](https://github.com/stateofjermaine)
 
 ### Amy Cohen
-* @cohenamyv
+* Twitter: @cohenamyv
 * [Linked In](https://www.linkedin.com/in/amyvcohen/)
 * [Git Hub](https://github.com/AmyCohen)
 
