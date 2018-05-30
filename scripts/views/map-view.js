@@ -43,7 +43,7 @@ var app = app || {};
       lat: marker.position.lat(),
       lng: marker.position.lng()
     }   
-    console.log('click data',dataLatLng);
+    console.log(dataLatLng);
     
     $.get(`${app.ENVIRONMENT.apiUrl}/data/sea-gov/latlng`, {dataLatLng})
       .then( result => {
@@ -51,67 +51,43 @@ var app = app || {};
       })
       .catch(console.error) 
   }
-//From Google Maps API Documentation
-    var input = document.getElementById('pac-input');
-    var searchBox = new google.maps.places.SearchBox(input);
-    map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
-    map.addListener('bounds_changed', function() {
-      searchBox.setBounds(map.getBounds());
-    });
+  //From Google Maps API Documentation
+  var input = document.getElementById('pac-input');
+  var searchBox = new google.maps.places.SearchBox(input);
+  map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
-    searchBox.addListener('places_changed', function() {
-      var places = searchBox.getPlaces();
+  map.addListener('bounds_changed', function() {
+    searchBox.setBounds(map.getBounds());
+  });
 
-      if (places.length == 0) {
+  searchBox.addListener('places_changed', function() {
+    var places = searchBox.getPlaces();
+
+    if (places.length == 0) {
+      return;
+    }
+
+    var bounds = new google.maps.LatLngBounds();
+    
+    places.forEach(function(place) {
+      
+      if (!place.geometry) {
+        console.log("Returned place contains no geometry");
         return;
       }
 
-      var bounds = new google.maps.LatLngBounds();
-          places.forEach(function(place) {
-            if (!place.geometry) {
-              console.log("Returned place contains no geometry");
-              return;
-            }
-
-          let Marker = 
-            new google.maps.Marker({
-            map: map,
-            title: place.name,
-            position: place.geometry.location
-          });
-
-          let dataLatLng = {
-            lat: Marker.position.lat(),
-            lng: Marker.position.lng()
-          };
-          console.log('search data',dataLatLng);
-
-          markers.push(Marker);
-
-          $.get(`${app.ENVIRONMENT.apiUrl}/data/sea-gov/latlng`, {dataLatLng})
-          .then( result => {
-            $('#crime-rows').text(result.length);
-          })
-          .catch(console.error) 
-
-          if (place.geometry.viewport) {
-            // Only geocodes have viewport.
-            bounds.union(place.geometry.viewport);
-          } else {
-            bounds.extend(place.geometry.location);
-          }
-          });
-        
-          map.fitBounds(bounds);
-
-          
-    
-        });
-    
-
-
-
-
+      if (place.geometry.viewport) {
+        // Only geocodes have viewport.
+        bounds.union(place.geometry.viewport);
+      } else {
+        bounds.extend(place.geometry.location);
+      }
+      placeMarker(places[0].geometry.location);
+    });
+  
+    map.fitBounds(bounds); 
+  
+  });
 
 })(app);
