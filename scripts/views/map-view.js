@@ -21,14 +21,16 @@ var app = app || {};
             map: map
         });
 
-        let dataLatLng = JSON.stringify({
+        let dataLatLng = {
           lat: marker.position.lat(),
           lng: marker.position.lng()
-        })
+        }
         console.log(dataLatLng);
 
         $.get(`${app.ENVIRONMENT.apiUrl}/data/sea-gov/latlng`, {dataLatLng})
-          .then(console.log)
+          .then( result => {
+            $('#crime-rows').text(result.length);
+          })
           .catch(console.error)
       }
     });
