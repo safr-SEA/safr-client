@@ -19,7 +19,7 @@ This was built using JavaScript, jQuery, PostgresQL, HTML, and CSS.  We also use
 
 ## Authors
 ### Karen Lai
-* [Linked In]()
+* [Linked In](https://www.linkedin.com/in/karenddlai/)
 * [Git Hub](https://github.com/karenbtlai)
 
 ### Justin Whitaker
@@ -55,4 +55,3 @@ Sites that we utilized to either gather informaiton for the database (API) or si
 Git Hub: [SAFR Repositories](https://github.com/safr-SEA)
 GH Pages: [SAFR-Client](https://safr-sea.github.io/safr-client/)
 Heroku: [SAFR-Server](https://safr-sea.herokuapp.com/)
-
