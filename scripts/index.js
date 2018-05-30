@@ -1,14 +1,14 @@
 'use strict';
 
-app = app || {};
+var app = app || {};
 
 ( function( module ) {
   let productionApiUrl = 'https://safr-sea.herokuapp.com/';
   let developmentApiUrl = 'http://localhost:3000';
 
-  module.isProductioon = /^(?!localhost|127)/.test( window.location.hostname );
+  module.isProduction = /^(?!localhost|127)/.test( window.location.hostname );
   module.ENVIRONMENT = {
-    apiURl: module.isProduction ? productionApiUrl : developmentApiUrl
+    apiUrl: module.isProduction ? productionApiUrl : developmentApiUrl
   };
   
 } )( app );
