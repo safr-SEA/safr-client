@@ -47,7 +47,9 @@ var app = app || {};
     
     $.get(`${app.ENVIRONMENT.apiUrl}/data/sea-gov/latlng`, {dataLatLng})
       .then( result => {
+     
         $('#crime-rows').text(result.length);
+        app.initPlotly(result);
       })
       .catch(console.error) 
   }
