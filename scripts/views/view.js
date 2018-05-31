@@ -23,7 +23,8 @@ var app = app || {};
 
         $('.icon-menu').on('click', () => {
           console.log('icon-menu on click with slide toggle');
-          $('.menu-links').slideToggle('slow');
+          // $('.menu-links').slideToggle('slow');
+          $('.menu-links').slideDown('slow');
         })
         
         $('#map-whole').on('click', () => {
