@@ -1,3 +1,7 @@
+body, p, nav, li, ul, div {
+  font-family: roboto;
+  color:white;
+}
 
 body {
   margin:0 !important;
@@ -7,7 +11,7 @@ body {
 
 #googleMap {
   width:100%;
-  height: 100vh;
+  height: 94vh;
 }
 
 #pac-input {
@@ -18,9 +22,10 @@ body {
 }
 
 #data-vis {
+  border-radius: 15px;
   right:0;
   top: 100vh;
-  background: white;
+  background: #3b3b3f;
   position: absolute;
   width: 100%;
   height: 100vh;
@@ -29,6 +34,7 @@ body {
 
 #crime-rows {
   margin-left:8em;
+  font-size: 2em;
 }
 
 #close {

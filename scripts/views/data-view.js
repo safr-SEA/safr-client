@@ -8,7 +8,7 @@ var app = app || {};
   let initPlotly = (result) => {
 
     $('#data-vis').animate({
-      top: '0'
+      top: '45vh'
     }, 'ease');
 
     let crimes = result.map((obj) => obj.summarized_offense_description);
@@ -22,13 +22,19 @@ var app = app || {};
     }];
 
     var layout = {
+      paper_bgcolor:"rgba(0,0,0,0)",
       height:480,
       width:480,
       showlegend: true,
-      legend: {"orientation": "h"}
+      legend: {"orientation": "h"},
+      font: {
+        family: 'roboto',
+        size: 22,
+        color: 'white'
+      }
     };
 
-    Plotly.newPlot('data-vis', data, layout, {displayModeBar:false});
+    Plotly.newPlot('plotly', data, layout, {displayModeBar:false});
   };
 
   module.initPlotly = initPlotly;

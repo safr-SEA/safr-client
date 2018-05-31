@@ -22,6 +22,36 @@ var app = app || {};
     $( '.container' ).hide();
     $( '#admin-page' ).fadeIn( 'slow' );
    }
+  
+  view.menuToggle = function () {
+
+      let toggle = () => {
+        if ( $( document ).width() <= 640 ) {
+          console.log( 'inside the if' )
+          $( '.menu-links' ).hide();
+
+          $( '.icon-menu' ).on( 'click', () => {
+            console.log( 'icon-menu on click with slide toggle' );
+            $( '.menu-links' ).slideDown( 'slow' );
+          } )
+
+          $( '#map-whole' ).on( 'click', () => {
+            console.log( 'map-whole when clicked hide menu links' )
+            $( '.menu-links' ).hide( 'slow' );
+          } )
+
+        } else {
+          console.log( 'hitting the else statement' )
+          $( '.menu-links' ).show();
+        }
+      }
+    toggle();
+    $( window ).resize( () => {
+        toggle();
+      } )
+    }
+
+  view.menuToggle();
 
   module.view = view;
 
