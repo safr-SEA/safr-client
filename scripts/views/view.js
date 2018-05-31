@@ -12,6 +12,10 @@ var app = app || {};
       .catch(console.error)
   }
 
+  view.initLoginPage = function () {
+    
+  }
+
   module.view = view;
 
 })(app);
