@@ -15,8 +15,8 @@ var app = app || {};
   }
 
   view.menuToggle = function() {
-  
-    let toggle = () => {
+    $(window).resize(() => {
+      console.log('window resized');
       if ($(document).width() <= 640) {
         console.log('inside the if')
         $('.menu-links').hide();
@@ -34,11 +34,7 @@ var app = app || {};
         } else {
           console.log('hitting the else statement')
           $('.menu-links').show();
-        }
-    }
-    toggle();
-    $(window).resize(() => {
-      toggle();     
+      }
     })
   };
 
