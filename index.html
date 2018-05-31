@@ -9,11 +9,12 @@
 	<link rel="stylesheet" href="styles/base.css">
 	<link rel="stylesheet" href="styles/layout.css">
 	<link rel="stylesheet" href="styles/modules.css">
+	<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Quicksand:300,400" rel="stylesheet">
 </head>
 
 <body>
 	<header>
-		<nav>
+		<nav id="nav-menu">
 			<div class="menu icon-menu"></div>
 			<div class="menu-links">
 				<ul>
@@ -53,13 +54,23 @@
 	</div>
 
 	<!-- Login View -->
-	<div id= "login-page" class="container">
-		<h1 id="login-heading">Safr</h1>
+	<div id="login-page" class="container">
+		<h1 id="login-heading">sāfr</h1>
 		<h3>Keeping you safe</h2>
+			<form id="login-form">
+				<input class="login-field" type="text" id="login-username" placeholder="username">
+				<input class="login-field" type="text" id="login-password" placeholder="enter the magic word">
+			</form>
 	</div>
 
 	<!-- About View -->
-
+	<div id="admin-page" class="container">
+		<h1>The Safr Team</h1>
+		<section>Teammate #1
+			<article>Teammate Bio</article>
+			<img src="http://via.placeholder.com/350x150">
+		</section>
+	</div>
 
 
 
