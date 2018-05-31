@@ -11,13 +11,38 @@
 	</head>
 			
 	<body>
+		<header>
+			<nav>
+				<div class="menu icon-menu"></div>
+				<div class="menu-links">
+					<ul>
+						<li><a href="#" class="icon-home">Home</a></li>
+						<li><a href="#" class="icon-map">Search</a></li>
+						<li><a href="#" class="icon-users">About Us</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
 
-		<div id="googleMap"></div>
-		<input id="pac-input" class="controls" type="text" placeholder="Search Box">
+		<div id="map-whole">
+			<div class="search-box">
+				<input id="pac-input" class="controls" type="text" placeholder="Explore">
+			</div>
+			<div id="googleMap"></div>
+		</div>
+		
 		<div id="data-vis">
 			<a id="close">X</a>
-			<span id="crime-rows">x</span><span> crimes in an approximately 2 block radius in the past 3 months.</span>
+			<div id="results">
+				<p>Your current search location of</p>
+				<p><span id="address"></span></p>
+				<p>shows <span id="crime-rows">x</span> crimes</p>
+				<p>in an approximately 2 block radius</p>
+				<p>in the past 3 months.</p>
+			</div>
 		</div>
+
+		
 
 		
 		<!-- CDN -->
@@ -26,7 +51,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
 
 		<!-- Google Maps API -->
-		<script src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrMtuAhGShfroThSBTXMA7kr8YbOpkThc&libraries=places"></script>
 
 		<!-- Plotly -->
 		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>

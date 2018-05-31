@@ -3,9 +3,11 @@
 var app = app || {};
 
 (function(module) {
+  $('#results').hide();
+
   var mapProp= {
     center: new google.maps.LatLng(47.6182479,-122.3524182),
-    zoom:13,
+    zoom:18,
     mapTypeControl: false,
     StreetViewControlOptions:false,
     styles: [
@@ -191,8 +193,13 @@ var app = app || {};
   let markers = [];
 
   map.addListener('click', function(event) {
+    $('#results').hide();
+
     deleteMarkers();
     placeMarker(event.latLng);
+    $('#address').text(event.latLng);
+    $('#results').fadeIn(1000);
+    $('#pac-input').empty();
   });
 
   $.get(`${app.ENVIRONMENT.apiUrl}/data/sea-gov/latlngall`)
@@ -228,7 +235,7 @@ var app = app || {};
       lng: marker.position.lng()
     }   
     console.log(dataLatLng);
-    
+
     $.get(`${app.ENVIRONMENT.apiUrl}/data/sea-gov/latlng`, {dataLatLng})
       .then( result => {
      
@@ -248,7 +255,14 @@ var app = app || {};
   });
 
   searchBox.addListener('places_changed', function() {
+    $('#results').hide();
+    deleteMarkers();
+
     var places = searchBox.getPlaces();
+    console.log(places[0].formatted_address);
+    $('#address').text(places[0].formatted_address);
+    $('#results').fadeIn(1000);
+
 
     if (places.length == 0) {
       return;
@@ -273,7 +287,6 @@ var app = app || {};
     });
   
     map.fitBounds(bounds); 
-  
   });
 
 })(app);
