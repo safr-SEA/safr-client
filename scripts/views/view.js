@@ -2,6 +2,8 @@
 
 var app = app || {};
 
+
+
 (function(module) {
 
   const view = {};
@@ -11,6 +13,18 @@ var app = app || {};
       .then(console.log)
       .catch(console.error)
   }
+
+  view.menuToggle = function() {
+    $('.menu-links').hide();
+    $('.icon-menu').on('click', () => {
+      $('.menu-links').slideToggle('slow');
+    })
+    $('#map-whole').on('click', () => {
+      $('.menu-links').hide('slow');
+    })
+  };
+
+  view.menuToggle();
 
   module.view = view;
 

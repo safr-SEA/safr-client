@@ -32,7 +32,7 @@ input#pac-input.controls {
   left: 3rem;
   top: 2rem;
   font-size: 2rem;
-  /* border-radius: 1rem; */
+  border-radius: 1rem;
   border: 1px solid gray;
 }
 
