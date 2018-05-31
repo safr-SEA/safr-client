@@ -14,8 +14,8 @@
 		<header>
 			<nav>
 				<div class="menu-bar">
-				<div class="menu icon-menu"></div>
-				<div class="safr">SAFR</div>
+				<div class="menu icon-menu">SAFR</div>
+				<div class="safr"></div>
 				<div class="log-in">LOG IN</div>
 				</div>
 				<div class="menu-links">
@@ -37,12 +37,13 @@
 		<div id="data-vis">
 			<a id="close">X</a>
 			<div id="results">
-				<p>Your current search location of</p>
-				<p><span id="address"></span></p>
-				<p>shows <span id="crime-rows">x</span> crimes</p>
-				<p>in an approximately 2 block radius</p>
-				<p>in the past 3 months.</p>
+				<!-- <p>Your current search location of</p><br> -->
+				<p><span id="address"></span></p><br>
+				<div><span id="crime-rows">x</span> CRIMES</div><br>
+				<p>2 block radius</p><br>
+				<p>last 90 days</p>
 			</div>
+			<div id="plotly"></div>
 		</div>
 
 		

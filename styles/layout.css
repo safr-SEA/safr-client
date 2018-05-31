@@ -8,6 +8,7 @@ nav {
   display: flex;
   justify-content: space-between;
   height: 100%;
+  padding:0.5em 1em;
 }
 
 .icon-menu {
@@ -16,9 +17,16 @@ nav {
   font-size: 2.5em;
 }
 
+.icon-menu::before, .icon-map::before, .icon-users::before {
+  margin-right: 0.5em;
+}
+
+.menu-links {
+  background-color: #3b3b3f;
+}
 .menu-links ul {
   margin: 0px;
-  padding: 0px;
+  padding: 0.5em 1.25em;
 }
 
 .menu-links ul li {
@@ -52,7 +60,6 @@ input#pac-input.controls {
   left: 3rem;
   top: 2rem;
   font-size: 2rem;
-  border-radius: 1rem;
   border: 1px solid gray;
 }
 
@@ -65,7 +72,7 @@ input#pac-input.controls {
   margin-left: 1rem;
   padding: 0 .7em 0 .8em;
   text-overflow: ellipsis;
-  width: 25rem;
+  width: 80vw;
 }
 
 #pac-input:focus {
@@ -74,8 +81,33 @@ input#pac-input.controls {
 
 #results {
   font-size: 2em;
-  text-align: center;
-  margin: auto;
+  text-align: left;
+  margin-left: 1em;
+}
+
+#results * {
+  display:inline;
+  margin:0;
+  padding:0;
+}
+
+#results p {
+  font-size: 0.8em;
+  font-weight: 100;
+}
+
+#results div {
+  font-weight: 800;
+}
+
+.js-plotly-plot, .plot-container, .svg-container {
+  display:inline;
+}
+
+#plotly {
+  position: absolute;
+  top: 3em;
+  left: 15%;
 }
 
 @media only screen and (min-width: 640px) {
