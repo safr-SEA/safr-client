@@ -127,17 +127,24 @@ input#pac-input.controls {
   }
 
   .menu-links {
-    display: inline-block;
+    display: inline;
+    background-color: rgba(0,0,0,0);
+    z-index: 2;
+    top: 0;
+    padding: 0em;
+    position: absolute;
   }
 
+  .menu-links * {
+    padding: 0;
+  }
   .menu-links ul li {
     display: inline-block;
     font-size: 2em;
-    padding: 1em;
+    padding: 0.15em;
   }
   
   #pac-input {
     font-size: 1.5em;
-    /* height: 2em; */
   }
 }
