@@ -5,6 +5,7 @@
 /* Login Page */
 
 #login-page {
+  padding-top: 10rem;
   width: 100%;
   min-width: 22rem;
   height: 100vh;
@@ -33,7 +34,8 @@
 
 .login-field {
   font-family: 'Quicksand';
-  font-size: 1rem;
+  color: rgb(95, 101, 110);
+  font-size: 1.4rem;
   display: block;
   width: 65%;
   margin: 1rem auto;
@@ -76,14 +78,73 @@ a {
 }
 
 /* About Page */
+
 #about-page {
+  text-align: center;
   width: 100%;
+  color: rgb(95, 101, 110);
   min-width: 22rem;
-  height: 100vh;
-  color: rgb(255, 255, 255);
+  height: 91vh;
   background: linear-gradient(45deg, rgb(57, 120, 192), rgb(0, 0, 0));
+  overflow: scroll;
 }
 
 #about-page h1 {
+  color: #FFF;
+  text-align: center;
   margin: 0 auto;
+  padding: 3rem;
+}
+
+#about-page img {
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+  box-shadow: inset 0 0 .5rem .5rem #FFF;
+}
+
+.about-card {
+  display: inline-block;
+  background: #FFF;
+  width: 75%;
+  max-width: 16rem;
+  margin: 0 .5rem;
+  margin-bottom: 2rem;
+  padding: .1rem;
+  border-radius: .3rem;
+}
+
+.about-card p {
+  padding: .35rem 2.2rem 1rem;
+  font-size: .8rem;
+}
+
+.about-card h3 {
+  padding: 1rem;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.about-heading {
+  font-size: 2rem;
+  margin: 0;
+  padding: 1.5rem;
+}
+
+/* Search Page */
+
+#googleMap button {
+  visibility: hidden;
+}
+
+.icon-home, .icon-map, .icon-users {
+  visibility: hidden;
+}
+
+.nav-text {
+  visibility: visible;
+}
+
+#data-vis {
+  max-width: 40rem;
 }
