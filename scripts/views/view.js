@@ -6,11 +6,11 @@ var app = app || {};
 
   const view = {};
 
-  view.initReport = function () {
-    $.get( `${ app.ENVIRONMENT.apiUrl }/data/sea-gov` )
-      .then( console.log )
-      .catch( console.error )
-  }
+  // view.initReport = function () {
+  //   $.get( `${ app.ENVIRONMENT.apiUrl }/data/sea-gov` )
+  //     .then( console.log )
+  //     .catch( console.error )
+  // }
 
   view.initLoginPage = function () {
     $( '.container' ).hide();
