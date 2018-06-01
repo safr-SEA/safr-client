@@ -2,8 +2,11 @@
   outline: none;
 }
 
+/* Login Page */
+
 #login-page {
   width: 100%;
+  min-width: 22rem;
   height: 100vh;
   color: rgb(255, 255, 255);
   background: linear-gradient(45deg, rgb(57, 120, 192), rgb(0, 0, 0));
@@ -70,4 +73,17 @@ a {
   text-decoration: none;
   font-weight: bold;
   color: rgb(88, 88, 88);
+}
+
+/* About Page */
+#about-page {
+  width: 100%;
+  min-width: 22rem;
+  height: 100vh;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(45deg, rgb(57, 120, 192), rgb(0, 0, 0));
+}
+
+#about-page h1 {
+  margin: 0 auto;
 }

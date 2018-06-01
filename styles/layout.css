@@ -6,6 +6,10 @@ nav {
   padding-bottom: 0.75em;
 }
 
+.nav-text{
+  font-family: 'Quicksand';
+}
+
 .menu-bar {
   display: flex;
   justify-content: space-between;
@@ -17,7 +21,8 @@ nav {
   display: inline;
   color: white;
   font-size: 2.5em;
-  padding-left:0.4em;
+  padding-left: 0.4em;
+  line-height: 4rem;
 }
 
 .icon-home::before, .icon-menu::before, .icon-map::before, .icon-users::before {
@@ -126,9 +131,10 @@ input#pac-input.controls {
 @media only screen and (min-width: 640px) {
   
   nav {
-    height:3.3em;
+    height: 4rem;
     padding-bottom:0;
   }
+  
   .icon-menu{
     display: none;
   }
