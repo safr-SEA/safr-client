@@ -6,8 +6,8 @@ var app = app || {};
   $('#results').hide();
 
   var mapProp= {
-    center: new google.maps.LatLng(47.6182479,-122.3524182),
-    zoom:18,
+    center: new google.maps.LatLng(47.6111267,-122.3314114),
+    zoom:14,
     mapTypeControl: false,
     StreetViewControlOptions:false,
     styles: [
@@ -202,9 +202,39 @@ var app = app || {};
     $('#pac-input').empty();
   });
 
-  $.get(`${app.ENVIRONMENT.apiUrl}/data/sea-gov/latlngall`)
-    .then(console.log)
-    .catch(console.error)
+  
+  
+  $.getJSON(`${app.ENVIRONMENT.apiUrl}/data/sea-gov/latlngall`)
+    .then(result => {
+      var latLngAll = result.map((e) => {
+        return {
+          lat: e.latitude,
+          lng: e.longitude
+        }
+      });
+      
+      let data1 = latLngAll.map((a) => {
+        return new google.maps.LatLng(a.lat, a.lng);
+      });
+
+      console.log(data1);
+      
+      var heatmap = new google.maps.visualization.HeatmapLayer({
+        data: data1,
+        map: map,
+        radius:35,
+        gradient: [
+          'rgba(102, 188, 188, 0)',
+          'rgba(102, 188, 188, 0.5)',
+          'rgba(22, 120, 166, 0.5)',
+          'rgba(255, 165, 30, 0.5)',
+          'rgba(255, 152, 56, 0.5)'
+        ]
+      });
+
+      heatmap.setMap(map);
+    })
+    .catch(console.error);
 
   function setMapOnAll(map) {
     for (var i = 0; i < markers.length; i++) {

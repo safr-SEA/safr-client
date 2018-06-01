@@ -12,6 +12,36 @@ var app = app || {};
       .catch( console.error )
   }
 
+  view.menuToggle = function() {
+    console.log('window resized');  
+      let toggle = () => {
+        if ($(document).width() <= 640) {
+         console.log('inside the if')
+         $('.menu-links').hide();
+ 
+         $('.icon-menu').on('click', () => {
+           console.log('icon-menu on click with slide toggle');
+           $('.menu-links').slideToggle('slow');
+         })
+         
+         $('#map-whole').on('click', () => {
+           console.log('map-whole when clicked hide menu links')
+           $('.menu-links').hide('slow');
+         })
+ 
+        } else {
+          console.log('hitting the else statement')
+          $('.menu-links').show();
+        }
+      }
+    
+    toggle();
+   
+    $(window).resize(() => {
+      toggle();     
+    })
+  }
+  
   view.initLoginPage = function () {
     $( '.container' ).hide();
     $( '#login-page' ).fadeIn( 'slow' );
@@ -30,33 +60,6 @@ var app = app || {};
     $( '#map-whole' ).fadeIn( 'slow' );
     view.menuToggle();
   }
-  
-  view.menuToggle = function () {
-      let toggle = () => {
-        if ( $( document ).width() <= 640 ) {
-          console.log( 'inside the if' )
-          $( '.menu-links' ).hide();
-
-          $( '.icon-menu' ).on( 'click', () => {
-            console.log( 'icon-menu on click with slide toggle' );
-            $( '.menu-links' ).slideDown( 'slow' );
-          } )
-
-          $( '#map-whole' ).on( 'click', () => {
-            console.log( 'map-whole when clicked hide menu links' )
-            $( '.menu-links' ).hide( 'slow' );
-          } )
-
-        } else {
-          console.log( 'hitting the else statement' )
-          $( '.menu-links' ).show();
-        }
-      }
-    toggle();
-    $( window ).resize( () => {
-        toggle();
-      } )
-    }
 
   module.view = view;
 

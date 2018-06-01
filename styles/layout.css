@@ -2,6 +2,8 @@ nav {
   background-color: black;
   color: white;
   overflow: hidden;
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
 }
 
 .menu-bar {
@@ -125,6 +127,7 @@ input#pac-input.controls {
   
   nav {
     height:3.3em;
+    padding-bottom:0;
   }
   .icon-menu{
     display: none;
