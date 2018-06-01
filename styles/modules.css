@@ -44,6 +44,7 @@
   margin: 1rem auto;
   padding: 1rem 1.5rem;
   border-radius: 2rem;
+  border: none;
   max-width: 20rem;
 }
 
@@ -98,4 +99,12 @@ a {
 
 #googleMap button {
   visibility: hidden;
+}
+
+.icon-home, .icon-map, .icon-users {
+  visibility: hidden;
+}
+
+.nav-text {
+  visibility: visible;
 }

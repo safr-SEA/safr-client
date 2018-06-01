@@ -2,8 +2,8 @@ nav {
   background-color: black;
   color: white;
   overflow: hidden;
-  padding-top: 0.75em;
-  padding-bottom: 0.75em;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .nav-text{
@@ -15,19 +15,15 @@ nav {
   display: flex;
   justify-content: space-between;
   height: 100%;
-  padding:0.5em 1em;
+  padding: 0.5rem 1rem;
 }
 
 .icon-menu {
   display: inline;
   color: white;
-  font-size: 2.5em;
-  padding-left: 0.4em;
+  font-size: 2.5rem;
+  padding-left: 1.5rem;
   line-height: 4rem;
-}
-
-.icon-home::before, .icon-menu::before, .icon-map::before, .icon-users::before {
-  margin-right: 0.5em;
 }
 
 .menu-links {
@@ -73,14 +69,13 @@ input#pac-input.controls {
 }
 
 #pac-input {
-  background-color: #fff;
+  background: #fff;
   font-family: 'Quicksand';
   font-weight: bolder;
-  margin-top: 1rem;
-  margin-left: 1rem;
   padding: 0 .7em 0 .8em;
   text-overflow: ellipsis;
   width: 80vw;
+  max-width: 45rem;
   border-radius: 2rem;
 }
 
@@ -133,7 +128,8 @@ input#pac-input.controls {
   
   nav {
     height: 4rem;
-    padding-bottom:0;
+    line-height: 4rem;
+    padding-bottom: .75rem;
   }
   
   .icon-menu{
