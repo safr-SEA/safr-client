@@ -7,7 +7,7 @@
 * Generally keeping Slack questions late in the evening simple. 
 * Open communication in group Slack. 
  ### Ensuring all voices are heard
-* When a new idea is presented, everyone give constructive ideas related to it and recognizes the person’s idea.
+* When a new idea is presented, everyone gives constructive ideas related to it and recognizes the person’s idea.
  ### Psychological Safety
 * Speak up when bothered by something. 
 * Go to someone else for support if needed. 
@@ -27,10 +27,10 @@
 ## Git process
 ### Git Flow
 * Branch from master onto a setup branch
-* merge with that test branch all day.
+* Merge with that test branch all day.
 * Only clean code on master branch.
 ### Naming convention for branches: 
-* name-pageOrAssignment.
+* name-pageOrAssignment or day-feature
 * Commit messages have items accomplished.
 ### Reviewing Pull Requests
 * No one person can close their own pull request to either setup or master.
