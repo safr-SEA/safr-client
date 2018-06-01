@@ -4,11 +4,8 @@
 
 /* Login Page */
 
-#login-content {
-  margin-top: 10rem;
-}
-
 #login-page {
+  padding-top: 10rem;
   width: 100%;
   min-width: 22rem;
   height: 100vh;
@@ -44,7 +41,6 @@
   margin: 1rem auto;
   padding: 1rem 1.5rem;
   border-radius: 2rem;
-  border: none;
   max-width: 20rem;
 }
 
@@ -84,6 +80,7 @@ a {
 /* About Page */
 
 #about-page {
+  text-align: center;
   width: 100%;
   color: rgb(95, 101, 110);
   min-width: 22rem;
@@ -100,25 +97,32 @@ a {
 }
 
 #about-page img {
+  width: 90%;
   display: block;
   margin: 0 auto;
-  box-shadow: inset 0 0 .05rem .05rem #000;
+  box-shadow: inset 0 0 .5rem .5rem #FFF;
 }
 
 .about-card {
+  display: inline-block;
   background: #FFF;
   width: 75%;
-  margin: 0 auto;
+  max-width: 16rem;
+  margin: 0 .5rem;
   margin-bottom: 2rem;
   padding: .1rem;
+  border-radius: .3rem;
 }
 
 .about-card p {
   padding: .35rem 2.2rem 1rem;
+  font-size: .8rem;
 }
 
 .about-card h3 {
-  padding: 1rem 2.2rem;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-size: 1.5rem;
 }
 
 .about-heading {
@@ -139,4 +143,8 @@ a {
 
 .nav-text {
   visibility: visible;
+}
+
+#data-vis {
+  max-width: 40rem;
 }
