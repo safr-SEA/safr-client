@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Safr SEA</title>
+	<title>sāfr: Keeping you safe</title>
 
 	<link rel="stylesheet" href="styles/normalize.css">
 	<link rel="stylesheet" href="styles/icons.css">
@@ -39,10 +39,10 @@
 		</nav>
 	</header>
 
-	<!-- Map View		 -->
+	<!-- Map View -->
 	<div id="map-whole" class="container">
 		<div class="search-box">
-			<input id="pac-input" class="controls" type="text" placeholder="Explore">
+			<input id="pac-input" class="controls" type="text" placeholder="explore">
 		</div>
 		<div id="googleMap">
 		</div>
@@ -69,10 +69,10 @@
 	<!-- Login View -->
 	<div id="login-page" class="container">
 		<h1 id="login-heading">sāfr</h1>
-		<h3>Keeping you safe</h2>
+		<h3>Keeping you safe</h3>
 			<form id="login-form">
 				<input class="login-field" type="text" id="login-username" placeholder="username">
-				<input class="login-field" type="text" id="login-password" placeholder="enter the magic word">
+				<input class="login-field" type="password" id="login-password" placeholder="password">
 				<div id="button-container">
 					<div class="login-button" id="user-button">
 						<a href="/search">Login</a>
@@ -85,21 +85,45 @@
 	</div>
 
 	<!-- About View -->
-		<div id="about-page" class="container">
-			<h1>Safr Team</h1>
-			<section>Teammate #1
-				<article>Teammate Bio</article>
-				<img src="http://via.placeholder.com/350x150">
-			</section>
-		</div>
+	<div id="about-page" class="container">
+		<h1>The sāfr Project</h1>
+		<section class="about-card">
+			<h3 class="about-heading">Amy Cohen</h3>
+			<article>
+				<img src="./images/Amy.jpg">
+				<p>A Washington native who loves the outdoors, reading, and sewing, I have a passion for coding and solving	problems. I enjoy bringing people together, finding ways we can all relate.</p>
+			</article>
+		</section>
+		<section class="about-card">
+			<h3 class="about-heading">Karen Lai</h3>
+			<article>
+				<img src="./images/Karen.jpg">
+				<p>I am a product designer from Ottawa, Canada. I believe the fusion of tech and design is key to product innovation, which is why my goal is to learn to code and be a unicorn.</p>
+			</article>
+		</section>
+		<section class="about-card">
+			<h3 class="about-heading">Justin Whitaker</h3>
+			<article>
+				<img src="./images/Justin.jpg">
+				<p>I'm a technologist with a biology and mechanical background and a passion for computing	devices, software, and the cloud. I'm excited to bring my ideas to life.</p>
+			</article>
+		</section>
+		<section class="about-card">
+			<h3 class="about-heading">Jermaine Walker</h3>
+			<article>
+				<img src="./images/Jermaine.jpg">
+				<p>I am designer-slash-techie who likes to make things. My favorite thing in life is collaborating with creatives and watching ideas grow from seed to sprout.</p>
+			</article>
+		</section>
+	</div>
 
 	<!-- CDN -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
 
-		<!-- Google Maps API -->
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrMtuAhGShfroThSBTXMA7kr8YbOpkThc&libraries=places,visualization"></script>
+	<!-- Google Maps API -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrMtuAhGShfroThSBTXMA7kr8YbOpkThc&libraries=places,visualization"></script>
 
 	<!-- Plotly -->
 	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
