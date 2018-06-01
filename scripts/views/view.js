@@ -14,17 +14,22 @@ var app = app || {};
 
   view.initLoginPage = function () {
     $( '.container' ).hide();
-    $( '#nav-menu' ).hide();
     $( '#login-page' ).fadeIn( 'slow' );
   }
 
-  view.initAdminPage = function () { 
+  view.initAboutPage = function () { 
     $( '.container' ).hide();
-    $( '#admin-page' ).fadeIn( 'slow' );
-   }
+    $( '#about-page' ).fadeIn( 'slow' );
+    view.menuToggle();
+  }
+  
+  view.initSearchPage = function () {
+    $( '.container' ).hide();
+    $( '#map-whole' ).fadeIn( 'slow' );
+    view.menuToggle();
+  }
   
   view.menuToggle = function () {
-
       let toggle = () => {
         if ( $( document ).width() <= 640 ) {
           console.log( 'inside the if' )
@@ -51,10 +56,6 @@ var app = app || {};
       } )
     }
 
-  view.menuToggle();
-
   module.view = view;
 
 } )( app );
-
-app.view.initLoginPage();
