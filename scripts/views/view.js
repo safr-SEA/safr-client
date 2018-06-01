@@ -42,7 +42,7 @@ var app = app || {};
             $( '.menu-links' ).slideDown( 'slow' );
           } )
 
-          $( '#map-whole' ).on( 'click', () => {
+          $( '#map-whole, #about-page' ).on( 'click', () => {
             console.log( 'map-whole when clicked hide menu links' )
             $( '.menu-links' ).hide( 'slow' );
           } )
