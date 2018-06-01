@@ -75,7 +75,7 @@ input#pac-input.controls {
   padding: 0 .7em 0 .8em;
   text-overflow: ellipsis;
   width: 70vw;
-  max-width: 45rem;
+  max-width: 35rem;
   border-radius: 2rem;
 }
 
@@ -85,7 +85,7 @@ input#pac-input.controls {
 
 #results {
   color: #FFF;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   text-align: left;
   margin-left: 2rem;
 }
@@ -112,7 +112,7 @@ input#pac-input.controls {
 #plotly {
   position: absolute;
   top: 1rem;
-  left: 17%;
+  left: 20%;
 }
 
 #close {

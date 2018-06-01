@@ -8,7 +8,7 @@ var app = app || {};
   let initPlotly = (result) => {
 
     $('#data-vis').animate({
-      top: '45vh'
+      top: '47vh'
     }, 'ease');
 
     let crimes = result.map((obj) => obj.summarized_offense_description);
@@ -23,13 +23,13 @@ var app = app || {};
 
     var layout = {
       paper_bgcolor:"rgba(0,0,0,0)",
-      height:480,
-      width:480,
+      height:390,
+      width:390,
       showlegend: true,
       legend: {"orientation": "h"},
       font: {
-        family: 'roboto',
-        size: 22,
+        family: 'Quicksand',
+        size: 17,
         color: 'white'
       }
     };
