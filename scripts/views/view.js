@@ -15,22 +15,34 @@ var app = app || {};
   }
 
   view.menuToggle = function() {
-    $(window).resize(() => {
-      if ($(document).width() <= 640) {
-        $('.menu-links').hide();
-
-        $('.icon-menu').on('click', () => {
-          $('.menu-links').slideDown('slow');
-        })
-        
-        $('#map-whole').on('click', () => {
-          $('.menu-links').hide('slow');
-        })
-      } else {
-        $('.menu-links').show();
+    console.log('window resized');  
+      let toggle = () => {
+        if ($(document).width() <= 640) {
+         console.log('inside the if')
+         $('.menu-links').hide();
+ 
+         $('.icon-menu').on('click', () => {
+           console.log('icon-menu on click with slide toggle');
+           $('.menu-links').slideToggle('slow');
+         })
+         
+         $('#map-whole').on('click', () => {
+           console.log('map-whole when clicked hide menu links')
+           $('.menu-links').hide('slow');
+         })
+ 
+        } else {
+          console.log('hitting the else statement')
+          $('.menu-links').show();
+        }
       }
+    
+    toggle();
+   
+    $(window).resize(() => {
+      toggle();     
     })
-  };
+  }
 
   view.menuToggle();
 
