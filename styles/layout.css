@@ -8,6 +8,7 @@ nav {
 
 .nav-text{
   font-family: 'Quicksand';
+  text-transform: lowercase;
 }
 
 .menu-bar {
@@ -138,6 +139,10 @@ input#pac-input.controls {
   .icon-menu{
     display: none;
   }
+
+  .icon-home, .icon-menu, .icon-map, .icon-users {
+  margin-right: 2rem;
+}
 
   .menu-links {
     display: inline;
