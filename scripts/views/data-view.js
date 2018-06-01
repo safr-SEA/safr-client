@@ -23,8 +23,8 @@ var app = app || {};
 
     var layout = {
       paper_bgcolor:"rgba(0,0,0,0)",
-      height:390,
-      width:390,
+      height:450,
+      width:420,
       showlegend: true,
       legend: {"orientation": "h"},
       font: {
