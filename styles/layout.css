@@ -2,6 +2,8 @@ nav {
   background-color: black;
   color: white;
   overflow: hidden;
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
 }
 
 .menu-bar {
@@ -15,9 +17,10 @@ nav {
   display: inline;
   color: white;
   font-size: 2.5em;
+  padding-left:0.4em;
 }
 
-.icon-menu::before, .icon-map::before, .icon-users::before {
+.icon-home::before, .icon-menu::before, .icon-map::before, .icon-users::before {
   margin-right: 0.5em;
 }
 
@@ -121,7 +124,10 @@ input#pac-input.controls {
 }
 
 @media only screen and (min-width: 640px) {
-
+  
+  nav {
+    height:3.3em;
+  }
   .icon-menu{
     display: none;
   }

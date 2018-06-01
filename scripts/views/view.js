@@ -2,16 +2,14 @@
 
 var app = app || {};
 
-
-
-(function(module) {
+( function ( module ) {
 
   const view = {};
 
-  view.initReport = function() {
-    $.get(`${app.ENVIRONMENT.apiUrl}/data/sea-gov`)
-      .then(console.log)
-      .catch(console.error)
+  view.initReport = function () {
+    $.get( `${ app.ENVIRONMENT.apiUrl }/data/sea-gov` )
+      .then( console.log )
+      .catch( console.error )
   }
 
   view.menuToggle = function() {
@@ -43,9 +41,26 @@ var app = app || {};
       toggle();     
     })
   }
+  
+  view.initLoginPage = function () {
+    $( '.container' ).hide();
+    $( '#login-page' ).fadeIn( 'slow' );
+  }
 
-  view.menuToggle();
+  view.initAboutPage = function () { 
+    $( '.container' ).hide();
+    $( '#nav-menu' ).fadeIn( 'slow' );
+    $( '#about-page' ).fadeIn( 'slow' );
+    view.menuToggle();
+  }
+  
+  view.initSearchPage = function () {
+    $( '.container' ).hide();
+    $( '#nav-menu' ).fadeIn( 'slow' );
+    $( '#map-whole' ).fadeIn( 'slow' );
+    view.menuToggle();
+  }
 
   module.view = view;
 
-})(app);
+} )( app );

@@ -1,54 +1,89 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Safr SEA</title>
-		
-		<link rel="stylesheet" href="styles/normalize.css">
-		<link rel="stylesheet" href="styles/icons.css">
-		<link rel="stylesheet" href="styles/base.css">
-		<link rel="stylesheet" href="styles/layout.css">
-		<link rel="stylesheet" href="styles/modules.css">
-	</head>
-			
+
+<head>
+	<title>Safr SEA</title>
+
+	<link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/icons.css">
+	<link rel="stylesheet" href="styles/base.css">
+	<link rel="stylesheet" href="styles/layout.css">
+	<link rel="stylesheet" href="styles/modules.css">
+	<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Quicksand:300,400" rel="stylesheet">
+	
+</head>
+
 	<body>
 		<header>
-			<nav>
-				<div class="menu-bar">
-				<div class="menu icon-menu">SAFR</div>
-				<div class="safr"></div>
-				<div class="log-in">LOG IN</div>
-				</div>
+			<nav class="container" id="nav-menu">
+				<div class="menu icon-menu"></div>
 				<div class="menu-links">
 					<ul>
-						<li><a href="#" class="icon-map">Search Map</a></li>
-						<li><a href="#" class="icon-users">About Us</a></li>
+						<li>
+							<a href="/" class="icon-home">Home</a>
+						</li>
+						<li>
+							<a href="/search" class="icon-map">Search</a>
+						</li>
+						<li>
+							<a href="/about" class="icon-users">About Us</a>
+						</li>
 					</ul>
 				</div>
 			</nav>
 		</header>
 
-		<div id="map-whole">
-			<div class="search-box">
-				<input id="pac-input" class="controls" type="text" placeholder="Explore">
+			<!-- Map View		 -->
+			<div id="map-whole" class="container">
+				<div class="search-box">
+					<input id="pac-input" class="controls" type="text" placeholder="Explore">
+				</div>
+				<div id="googleMap">
+				</div>
+
+				<div id="data-vis">
+					<a id="close">X</a>
+					<div id="results">
+						<!-- Your current search location of -->
+						<p>
+							<span id="address"></span>
+						</p>
+						<br>
+						<div>
+							<span id="crime-rows">x</span> CRIMES</div>
+						<br>
+						<p>2 block radius</p>
+						<br>
+						<p>last 90 days</p>
+					</div>
+					<div id="plotly"></div>
+				</div>
 			</div>
-			<div id="googleMap"></div>
-		</div>
-		
-		<div id="data-vis">
-			<a id="close">X</a>
-			<div id="results">
-				<!-- <p>Your current search location of</p><br> -->
-				<p><span id="address"></span></p><br>
-				<div><span id="crime-rows">x</span> CRIMES</div><br>
-				<p>2 block radius</p><br>
-				<p>last 90 days</p>
+
+			<!-- Login View -->
+			<div id="login-page" class="container">
+				<h1 id="login-heading">sāfr</h1>
+				<h3>Keeping you safe</h2>
+					<form id="login-form">
+						<input class="login-field" type="text" id="login-username" placeholder="username">
+						<input class="login-field" type="text" id="login-password" placeholder="enter the magic word">
+						<div id="button-container">
+						<div class="login-button" id="user-button"><a href="/search">Login</a></div>
+						<div class="login-button" id="guest-button"><a href="/search">Guest</a></div>
+						</div>
+					</form>
 			</div>
-			<div id="plotly"></div>
+
+			<!-- About View -->
+			<div id="about-page" class="container">
+				<h1>The Safr Team</h1>
+				<section>Teammate #1
+					<article>Teammate Bio</article>
+					<img src="http://via.placeholder.com/350x150">
+				</section>
+			</div>
 		</div>
 
-		
-
-		
 		<!-- CDN -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
@@ -68,4 +103,5 @@
 		<script src="scripts/routes.js"></script>
 
 	</body>
+
 </html>
