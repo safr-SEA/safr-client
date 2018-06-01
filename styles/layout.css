@@ -127,6 +127,7 @@ input#pac-input.controls {
   
   nav {
     height:3.3em;
+    padding-bottom:0;
   }
   .icon-menu{
     display: none;

@@ -6,8 +6,8 @@ var app = app || {};
   $('#results').hide();
 
   var mapProp= {
-    center: new google.maps.LatLng(47.6182479,-122.3524182),
-    zoom:18,
+    center: new google.maps.LatLng(47.6111267,-122.3314114),
+    zoom:14,
     mapTypeControl: false,
     StreetViewControlOptions:false,
     styles: [
