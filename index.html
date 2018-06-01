@@ -14,8 +14,8 @@
 </head>
 
 	<body>
-		<header class="container">
-			<nav id="nav-menu">
+		<header>
+			<nav class="container" id="nav-menu">
 				<div class="menu icon-menu"></div>
 				<div class="menu-links">
 					<ul>
@@ -44,7 +44,7 @@
 				<div id="data-vis">
 					<a id="close">X</a>
 					<div id="results">
-						<!-- <p>Your current search location of</p><br> -->
+						<!-- Your current search location of -->
 						<p>
 							<span id="address"></span>
 						</p>
@@ -67,8 +67,10 @@
 					<form id="login-form">
 						<input class="login-field" type="text" id="login-username" placeholder="username">
 						<input class="login-field" type="text" id="login-password" placeholder="enter the magic word">
-						<a href="/search">Log in as guest</a>
-						<a href="/about">Go to About</a>
+						<div id="button-container">
+						<div class="login-button" id="user-button"><a href="/search">Login</a></div>
+						<div class="login-button" id="guest-button"><a href="/search">Guest</a></div>
+						</div>
 					</form>
 			</div>
 

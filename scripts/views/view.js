@@ -19,12 +19,14 @@ var app = app || {};
 
   view.initAboutPage = function () { 
     $( '.container' ).hide();
+    $( '#nav-menu' ).fadeIn( 'slow' );
     $( '#about-page' ).fadeIn( 'slow' );
     view.menuToggle();
   }
   
   view.initSearchPage = function () {
     $( '.container' ).hide();
+    $( '#nav-menu' ).fadeIn( 'slow' );
     $( '#map-whole' ).fadeIn( 'slow' );
     view.menuToggle();
   }
