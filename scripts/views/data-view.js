@@ -8,7 +8,7 @@ var app = app || {};
   let initPlotly = (result) => {
 
     $('#data-vis').animate({
-      top: '47vh'
+      top: '38vh'
     }, 'ease');
 
     let crimes = result.map((obj) => obj.summarized_offense_description);
