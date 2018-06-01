@@ -39,4 +39,5 @@ body {
 
 #close {
   float:right;
+  cursor: pointer;
 }

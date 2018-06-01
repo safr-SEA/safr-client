@@ -4,6 +4,10 @@
 
 /* Login Page */
 
+#login-content {
+  margin-top: 10rem;
+}
+
 #login-page {
   width: 100%;
   min-width: 22rem;
@@ -33,7 +37,8 @@
 
 .login-field {
   font-family: 'Quicksand';
-  font-size: 1rem;
+  color: rgb(95, 101, 110);
+  font-size: 1.4rem;
   display: block;
   width: 65%;
   margin: 1rem auto;
@@ -76,6 +81,7 @@ a {
 }
 
 /* About Page */
+
 #about-page {
   width: 100%;
   min-width: 22rem;
@@ -86,4 +92,10 @@ a {
 
 #about-page h1 {
   margin: 0 auto;
+}
+
+/* Search Page */
+
+#googleMap button {
+  visibility: hidden;
 }

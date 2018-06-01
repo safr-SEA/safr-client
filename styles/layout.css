@@ -73,14 +73,14 @@ input#pac-input.controls {
 
 #pac-input {
   background-color: #fff;
-  font-family: Roboto;
-  /* font-size: 3em; */
+  font-family: 'Quicksand';
   font-weight: bolder;
   margin-top: 1rem;
   margin-left: 1rem;
   padding: 0 .7em 0 .8em;
   text-overflow: ellipsis;
   width: 80vw;
+  border-radius: 2rem;
 }
 
 #pac-input:focus {
